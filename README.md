@@ -1,7 +1,7 @@
 # Projek-pemweb
 ## Penugasan
-Alvaro: reader \\
-Naufal: jadwal(crud) \\
+Alvaro: reader <br>
+Naufal: jadwal(crud) <br>
 Adhiyaksa: login, register, notifikasi
 
 ## Referensi aplikasi web
