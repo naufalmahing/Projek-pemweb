@@ -5,11 +5,11 @@ Naufal: jadwal(crud) <br>
 Adhiyaksa: login, register, notifikasi
 
 ## Referensi aplikasi web
-Audio: https://quranicaudio.com/
+Audio: https://quranicaudio.com/ <br>
 Fitur-fitur: https://quran.com/
 
 ## Link pendukung
-Cara buat aplikasi alquran (reader): https://www.youtube.com/watch?v=1sdv5iz71D0
+Cara buat aplikasi alquran (reader): https://www.youtube.com/watch?v=1sdv5iz71D0 <br>
 Notifikasi: https://youtu.be/jWfkg8E2gKE
 
 ## Laporan
