@@ -13,4 +13,4 @@ Cara buat aplikasi alquran (reader): https://www.youtube.com/watch?v=1sdv5iz71D0
 Notifikasi: https://youtu.be/jWfkg8E2gKE
 
 ## Laporan
-Projek pemweb: https://drive.google.com/drive/folders/155-0u5305CoSAMW9cFOvYOMzi3IwBQW3?usp=sharing
+Folder projek pemweb: https://drive.google.com/drive/folders/155-0u5305CoSAMW9cFOvYOMzi3IwBQW3?usp=sharing
