@@ -3,7 +3,7 @@
 --
 ## Penugasan
 Alvaro: reader <br>
-Naufal: jadwal, notifikasi(crud) <br>
+Naufal: jadwal, reminder <br>
 Adhiyaksa: login, register, forgot password 
 
 ## Referensi aplikasi web
