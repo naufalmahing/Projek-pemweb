@@ -24,10 +24,13 @@
             margin: 0;
         }
     </style>
+
+    <script src="../search/searchscript.js"></script>
   </head>
   <body>
       <div class="container">
         <h3 class="text-center">Quran Reader - Kelompok 3</h3>
+        <?php include '../search/searchform.html'; ?>
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
         <hr>
         <table class="table table-striped table-bordered">

@@ -44,8 +44,8 @@
                 $surah = $_GET['surah'];
                 $nama_surah = $_GET['nama_surah'];
 
-                echo '<a href="index.php">Kembali</a>';
                 echo '<h3 class="text-center">' . $nama_surah . '</h3>';
+                echo '<a href="index.php">Kembali</a>';
                 echo '<hr>';
                 echo '<h4 class="arabic text-center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h4>';
                 echo '<br>';
