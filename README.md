@@ -3,8 +3,8 @@
 --
 ## Penugasan
 Alvaro: reader <br>
-Naufal: jadwal(crud) <br>
-Adhiyaksa: login, register, notifikasi
+Naufal: jadwal, reminder <br>
+Adhiyaksa: login, register, forgot password 
 
 ## Referensi aplikasi web
 Audio: https://quranicaudio.com/ <br>
