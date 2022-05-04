@@ -106,7 +106,7 @@
 
     <div class="container">
         <hr>
-        <a align="right" href="index.php">Kembali</a>
+        <a align="right" href="../reader/index.php">Kembali</a>
         <br><br>
         <div id="calendar"></div>
     </div>

@@ -12,7 +12,7 @@
     <style>
         @font-face {
             font-family: 'Uthmani';
-            src: url('assets/font/UthmanicHafs1Ver09.otf') format('truetype');
+            src: url('../assets/font/UthmanicHafs1Ver09.otf') format('truetype');
         }
 
         .arabic{

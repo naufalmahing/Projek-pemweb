@@ -12,7 +12,7 @@
     <style>
         @font-face {
             font-family: 'Uthmani';
-            src: url('assets/font/UthmanicHafs1Ver09.otf') format('truetype');
+            src: url('../assets/font/UthmanicHafs1Ver09.otf') format('truetype');
         }
 
         .arabic{
@@ -28,7 +28,7 @@
   <body>
       <div class="container">
         <h3 class="text-center">Quran Reader - Kelompok 3</h3>
-        <a href="jadwal.php" class="text-left">Setel Reminder</a>
+        <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
         <hr>
         <table class="table table-striped table-bordered">
             <tr>
