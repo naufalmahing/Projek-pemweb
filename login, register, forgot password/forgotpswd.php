@@ -29,23 +29,23 @@ if(isset($_POST["forgot_email"])) {
 
     try {
         //Server settings
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'readerquran.officecenter@gmail.com';                     //SMTP username
-        $mail->Password   = 'Kelompokmusik/hobi666';                               //SMTP password
-        $mail->SMTPSecure = 'tls';             //Enable implicit TLS encryption
-        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure =     PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->isSMTP();                                            
+        $mail->Host       = 'smtp.gmail.com';                     
+        $mail->SMTPAuth   = true;                                   
+        $mail->Username   = 'readerquran.officecenter@gmail.com';                     
+        $mail->Password   = 'Kelompokmusik/hobi666';                               
+        $mail->SMTPSecure = 'tls';             
+        $mail->Port       = 587;                                    
 
         //Recipients
         $mail->setFrom('readerquran.office@gmail.com', 'Quran Reader');
-        $mail->addAddress($mailto);     //Add a recipient
+        $mail->addAddress($mailto);     
         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 
 
         //Content
         $link = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/passwordreset.php?linkcode=$linkcode";
-        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->isHTML(true);                                  
         $mail->Subject = 'Reset Your Password';
         $mail->Body    = "<h2>This Your password reset link:</h2> <br>Please click<a href='$link'>here</a>";
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';

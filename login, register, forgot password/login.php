@@ -1,3 +1,9 @@
+<form action="" method="post">
+    <input type="text" name="signin_email" id="">
+    <input type="password" name="signin_password" id="">
+    <input type="submit" value="Login" name="signin">
+</form>
+
 <?php
 
 include 'conndbs.php';
