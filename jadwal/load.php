@@ -3,7 +3,7 @@ $connect = new PDO('mysql:host=localhost;dbname=test', 'root', 'pastipasti');
 
 $data = array();
 
-$query = "SELECT * FROM events ORDER BY id";
+$query = "SELECT * FROM events ORDER BY id"; // user hanya dapat melihat jadwal milik akunnya sendiri
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
