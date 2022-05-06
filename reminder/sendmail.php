@@ -11,7 +11,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
 
-function send_email($ke) {
+function send_email($ke, $kegiatan, $mulai, $selesai) {
     $mail = new PHPMailer(true);
 
     try {
@@ -29,14 +29,15 @@ function send_email($ke) {
         $mail->addAddress($ke);     
         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
 
-        
+        $mulai = date('h:i A', strtotime($mulai));
+        $selesai = date('h:i A', strtotime($selesai));
         $mail->isHTML(true);                                  
         $mail->Subject = 'Notifikasi event';
-        $mail->Body    = 'Anda memiliki kegiatan <b>in bold!</b> hari ini pukul..';
-        $mail->AltBody = 'Anda memiliki kegiatan <b>in bold!</b> hari ini pukul..';
+        $mail->Body    = 'Anda memiliki kegiatan <b>'.$kegiatan.'</b> hari ini mulai pukul '.$mulai.' hingga '.$selesai.'';
+        // $mail->AltBody = 'Anda memiliki kegiatan <b>in bold!</b> hari ini pukul..';
 
         $send = $mail->send();
-        echo 'Message has been sent';
+        echo 'Message has been sent.';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

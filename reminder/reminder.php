@@ -16,7 +16,7 @@ require 'sendmail.php';
 
 foreach($result as $row) {
 	if (date('d', strtotime($row['start_event'])) == date('d', strtotime('now'))) {
-		send_email($email);
+		send_email($row['email'], $row['title'], $row['start_event'], $row['end_event']);
 	} else {
 		echo 'tidak dikirim';
 	}
