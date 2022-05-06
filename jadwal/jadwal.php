@@ -1,3 +1,12 @@
+<?php 
+
+$email = 'naufalmahing@gmail.com';
+if (isset($_COOKIE['email'])) { 
+    $email = $_COOKIE['email'];
+}
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,14 +37,14 @@
             selectHelper:true,
             select: function(start, end, allDay) {
                 var title = prompt('Enter event title');
-                var email = prompt('Enter email');
+                // var email = prompt('Enter email');
                 if(title) {
                     var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
                     var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
                     $.ajax({
                         url:'insert.php',
                         type:'POST',
-                        data:{title:title, start:start, end:end, email:email},
+                        data:{title:title, start:start, end:end}, // hapus data email
                         success: function() {
                             calendar.fullCalendar('refetchEvents');
                             alert('Berhasil ditambahkan');
