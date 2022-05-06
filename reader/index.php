@@ -25,14 +25,13 @@
         }
     </style>
 
-    <script src="../search/searchscript.js"></script>
   </head>
   <body>
       <div class="container">
         <h3 class="text-center">Quran Reader - Kelompok 3</h3>
-        <?php include '../search/searchform.html'; ?>
+        <?php include '../search/search.php'; ?>
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
-        <hr>
+
         <table class="table table-striped table-bordered">
             <tr>
                 <th>No</th>
@@ -68,7 +67,6 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
     
   </body>
 </html>

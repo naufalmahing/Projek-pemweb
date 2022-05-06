@@ -7,11 +7,13 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
+
 require __DIR__.'/../vendor/autoload.php';
 
 //Create an instance; passing `true` enables exceptions
 
 function send_email($ke, $kegiatan, $mulai, $selesai) {
+
     $mail = new PHPMailer(true);
 
     try {
@@ -25,6 +27,7 @@ function send_email($ke, $kegiatan, $mulai, $selesai) {
         $mail->Port       = 587;
 
         
+
         $mail->setFrom('readerquran.officecenter@gmail.com', 'Quran Reader');
         $mail->addAddress($ke);     
         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
@@ -38,6 +41,7 @@ function send_email($ke, $kegiatan, $mulai, $selesai) {
 
         $send = $mail->send();
         echo 'Message has been sent.';
+
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
