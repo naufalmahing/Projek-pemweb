@@ -16,7 +16,7 @@ if (isset($_POST["signin"])) {
   if(mysqli_num_rows($check_login) > 0){
       $row = mysqli_fetch_assoc($check_login);
       $_SESSION["user_id"] = $row['id'];
-      header("Location:index.php");
+      header("Location:../reader/index.php");
     } else {
         $_POST["signin_password"] = "";
         echo ("<script LANGUAGE='JavaScript'>window.alert('Login Incorrect'); window.location.href='login.php';</script>");
