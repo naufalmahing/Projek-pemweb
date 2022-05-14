@@ -25,8 +25,13 @@
         }
     </style>
 
+    <link rel="stylesheet" href="../assets/style.css">
+
   </head>
   <body>
+      <div class="check-this-out">
+          i'm here
+      </div>
       <div class="container">
         <h3 class="text-center">Quran Reader - Kelompok 3</h3>
         <?php include '../search/search.php'; ?>
