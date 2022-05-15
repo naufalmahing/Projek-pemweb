@@ -5,13 +5,11 @@ if (isset($_POST['id'])) {
         $email = $_COOKIE['email'];
     }
 
-    $connect = new PDO('mysql:host=localhost;dbname=test', 'root', 'pastipasti');
-    $query = "delete from events where id=:id and email='$email'";
-    $statement = $connect->prepare($query);
-    $statement->execute(
-        array(
-            ':id'   => $_POST['id']
-        )
-    );
+    include '../reader/koneksi.php';
+
+    $query = "delete from events where id=? and email='$email'";
+    $statement = $koneksi->prepare($query);
+    $statement->bind_param('s', $_POST['id']);
+    $statement->execute();
 }
 ?>

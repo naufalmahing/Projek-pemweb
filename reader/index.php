@@ -28,7 +28,9 @@
   </head>
   <body>
       <div class="container">
-        <h3 class="text-center">Quran Reader - Kelompok 3</h3>
+        <h2 class="text-center">Quran Reader - Kelompok 3</h2>
+
+        <hr>
         <?php include '../search/search.php'; ?>
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
 

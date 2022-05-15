@@ -1,5 +1,5 @@
 <?php
-$connect = new PDO('mysql:host=localhost;dbname=test', 'root', 'pastipasti');
+include '../reader/koneksi.php';
 
 $data = array();
 
@@ -11,9 +11,10 @@ if (isset($_COOKIE['email'])) {
 
 $query = "SELECT * FROM events where email='$email' ORDER BY id";
 
-$statement = $connect->prepare($query);
+$statement = $koneksi->prepare($query);
 $statement->execute();
-$result = $statement->fetchAll();
+$result = $statement->get_result();
+$result =  $result->fetch_all(MYSQLI_ASSOC);
 
 foreach($result as $row) {
     $data[] = array(
