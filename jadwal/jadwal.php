@@ -1,8 +1,10 @@
 <?php 
 
-$email = 'naufalmahing@gmail.com';
-if (isset($_COOKIE['email'])) { 
-    $email = $_COOKIE['email'];
+session_start();
+if (isset($_SESSION['email'])) { 
+    $email = $_SESSION['email'];
+} else {
+    header('location:../login, register, forgot password/login.php');
 }
 
 ?>
@@ -15,7 +17,6 @@ if (isset($_COOKIE['email'])) {
     <title>Jadwal bang</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -38,15 +39,15 @@ if (isset($_COOKIE['email'])) {
             selectable:true,
             selectHelper:true,
             select: function(start, end, allDay) {
+                var email= 'anakmalang@gmail.com';
                 var title = prompt('Enter event title');
-                // var email = prompt('Enter email');
                 if(title) {
                     var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
                     var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
                     $.ajax({
                         url:'insert.php',
                         type:'POST',
-                        data:{title:title, start:start, end:end}, // hapus data email
+                        data:{title:title, start:start, end:end, email:email},
                         success: function() {
                             calendar.fullCalendar('refetchEvents');
                             alert('Berhasil ditambahkan');
@@ -112,7 +113,6 @@ if (isset($_COOKIE['email'])) {
 <body>
     <br>
     <h2 align="center">
-        <!-- <a href="#">Kalendar</a> -->
         Kalendar
     </h2>
 

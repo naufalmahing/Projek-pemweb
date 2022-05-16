@@ -1,11 +1,11 @@
 <?php
 include '../reader/koneksi.php';
 
-// $connect = new PDO('mysql:host=localhost;dbname=test', 'root', 'pastipasti');
-
-$email = 'naufalmahing@gmail.com';
-if (isset($_COOKIE['email'])) { 
-    $email = $_COOKIE['email'];
+session_start();
+if (isset($_SESSION['email'])) { 
+    $email = $_SESSION['email'];
+} else {
+    header('location:../login, register, forgot password/login.php');
 }
 
 if(isset($_POST['id'])) {
