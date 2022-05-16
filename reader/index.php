@@ -1,11 +1,3 @@
-<?php
-    // session_start();
-    // if (isset($_SESSION['email'])) {
-
-    // }
-    // session_destroy();
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -39,9 +31,21 @@
         <div class="container">
         <h2 class="text-center">Quran Reader - Kelompok 3</h2>
         <hr>
-        <?php include '../search/search.php'; ?>
+        <?php
+            include '../search/search.php'; 
+        ?>
 
-        <a href="../login, register, forgot password/login.php" class="text-left">Login</a>
+        <a href="../login, register, forgot password/login.php" class="text-left">
+        <?php 
+            session_start();
+            // echo $_SESSION['email'];
+            if (isset($_SESSION['email'])) {
+                echo 'Log out';
+            } else {
+                echo 'Login';
+            }
+        ?>
+        </a>
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
         <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
 

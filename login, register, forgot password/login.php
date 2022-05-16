@@ -1,8 +1,13 @@
 <?php
-
 include 'conndbs.php';
 
 session_start();
+if (isset($_SESSION['email'])) {
+  session_destroy();  
+  
+  session_start();
+}
+
 
 error_reporting(0);
   

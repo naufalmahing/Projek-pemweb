@@ -4,9 +4,10 @@ session_start();
 if (isset($_SESSION['email'])) { 
     $email = $_SESSION['email'];
 } else {
-    header('location:../login, register, forgot password/login.php');
+    echo ("<script LANGUAGE='JavaScript'>window.alert('Login terlebih dahulu untuk dapat setel reminder'); window.location.href='../reader/index.php';</script>");
+    // header('location:../reader/index.php');
 }
-
+echo $email;
 ?>
 
 <html lang="en">
