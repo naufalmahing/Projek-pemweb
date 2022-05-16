@@ -27,6 +27,7 @@
 
   </head>
   <body>
+      <br>
       <div class="container">
         <h2 class="text-center">Quran Reader - Kelompok 3</h2>
 
@@ -35,6 +36,7 @@
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
         <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
 
+        <br><br>
         <table class="table table-striped table-bordered">
             <tr>
                 <th>No</th>
