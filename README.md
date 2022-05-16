@@ -1,6 +1,6 @@
 # Projek-pemweb
 ## Note
---
+File pdf tidak diupload di github.
 ## Penugasan
 Alvaro: reader <br>
 Naufal: jadwal, reminder <br>
