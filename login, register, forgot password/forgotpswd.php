@@ -19,7 +19,7 @@ if(isset($_POST["forgot_email"])) {
         echo ("<script LANGUAGE='JavaScript'>window.alert('Something Went Wrong'); window.location.href='forgotpswd.php';</script>");
     } 
     if($check_email == 0){
-        exit(header("Location: /projek-akhir/errorpage.html"));
+        exit(header("Location: /errorpage.html"));
     }
 
     //Create an instance; passing `true` enables exceptions
