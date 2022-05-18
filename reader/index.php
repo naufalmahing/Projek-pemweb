@@ -33,13 +33,15 @@
         <hr>
         <?php
             include '../search/search.php'; 
+
+            session_start();
+            if (isset($_SESSION['email'])) {
+                echo "<div>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b> <br>";
         ?>
 
         <a href="../login, register, forgot password/login.php" class="text-left">
         <?php 
-            session_start();
-            if (isset($_SESSION['email'])) {
-                echo 'Log out';
+                echo 'Log out</div>';
             } else {
                 echo 'Login';
             }
