@@ -44,7 +44,7 @@ if(isset($_POST["signup"])){
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reg.css">
+  <link rel="stylesheet" href="../assets/style-reg.css">
   <title>Login</title>
 </head>
 <body>
@@ -102,6 +102,6 @@ towards healing your heart."</div>
   </div>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
-<script src="set.js"></script>
+<script src="../assets/set.js"></script>
 </body>
 </html>

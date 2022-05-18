@@ -36,7 +36,7 @@ if (isset($_POST["signin"])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-login.css">
+  <link rel="stylesheet" href="../assets/style-login.css">
   <title>Login</title>
 </head>
 <body>
@@ -91,6 +91,6 @@ if (isset($_POST["signin"])) {
   </div>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
-<script src="set.js"></script>
+<script src="../assets/set.js"></script>
 </body>
 </html>

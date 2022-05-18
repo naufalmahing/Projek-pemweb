@@ -116,6 +116,6 @@ if(isset($_POST["forgot_email"])) {
   </div>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
-<script src="set.js"></script>
+<script src="../assets/set.js"></script>
 </body>
 </html>
