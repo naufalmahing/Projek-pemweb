@@ -38,7 +38,6 @@
         <a href="../login, register, forgot password/login.php" class="text-left">
         <?php 
             session_start();
-            // echo $_SESSION['email'];
             if (isset($_SESSION['email'])) {
                 echo 'Log out';
             } else {
@@ -48,6 +47,7 @@
         </a>
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
         <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
+        <a href="../search/search.php" class="url">search</a>
 
         <br><br>
         <table class="table table-striped table-bordered">
