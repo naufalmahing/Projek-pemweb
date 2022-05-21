@@ -38,18 +38,14 @@
             if (isset($_SESSION['email'])) {
                 echo "<div>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b> <br>";
         ?>
-
-        <a href="../login, register, forgot password/login.php" class="text-left">
         <?php 
-                echo 'Log out</div>';
+                echo '<a href="../login, register, forgot password/login.php" class="text-left">Log out</a></div>';
             } else {
-                echo 'Login';
+                echo '<a href="../login, register, forgot password/login.php" class="text-left">Login</a>';
             }
         ?>
-        </a>
         <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
         <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
-        <a href="../search/search.php" class="url">search</a>
 
         <br><br>
         <table class="table table-striped table-bordered">
