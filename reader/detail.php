@@ -33,9 +33,75 @@
             margin:0;
         }
     </style>
+
+    <style>
+    @import url('https://rsms.me/inter/inter-ui.css');
+        @font-face {
+            font-family: 'Uthmani';
+            src: url('../assets/font/UthmanicHafs1Ver09.otf') format('truetype');
+        }
+
+        body {
+            font-family: 'Inter UI', sans-serif;
+        }
+
+        h2 {
+            color:white;
+            font-family: 'Inter UI', sans-serif;
+            margin: 0px;
+        }
+
+        .header {
+            background-color:#3bb78f;
+        }
+
+        .arabic {
+            font-family: 'Uthmani',serif;
+            font-size: 24px;
+            font-weight: 500;
+            direction: rtl;
+            padding: 5px;
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bot-header {
+            background-image: linear-gradient(315deg, #7ee8fa 0%,#80ff72 74%);
+            display: block;
+            text-align: center;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        .links a {
+            text-decoration: none;
+            color: black;
+            transition: 0.25s;
+        }
+
+        .links a:hover {
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0px;
+        }
+    </style>
   </head>
+
   <body>
-      <div class="container">
+      
         <?php
             include "koneksi.php";
 
@@ -43,13 +109,20 @@
             if (isset($_GET['surah']) || isset($_GET["nama_surah"])){
                 $surah = $_GET['surah'];
                 $nama_surah = $_GET['nama_surah'];
-
-                echo '<h3 class="text-center">' . $nama_surah . '</h3>';
-                echo '<a href="index.php">Kembali</a>';
-                echo '<hr>';
-                echo '<h4 class="arabic text-center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h4>';
-                echo '<br>';
-
+                $nama_surah = implode(' ', array_slice(explode(' ', $nama_surah), 1));
+                ?>
+                <div class="header">                
+                <?php echo '<h2 class="text-center">' . $nama_surah . '</h2>'; ?>
+                <div class="bot-header">
+                    <img src="../assets/tulisan_alquran.svg" alt="Italian Trulli" class="center">
+                    <div class="links row"><a align="center" href="../reader/index.php">Kembali</a></div>
+                    <br>
+                </div>
+                </div>
+                <h4 class="arabic text-center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h4>'
+                <br>
+                <div class="container">
+                <?php
                 $tampil = mysqli_query($koneksi,"SELECT
                                                     a.text as arabic,
                                                     b.text as indonesia
@@ -62,7 +135,7 @@
                 while ($data = mysqli_fetch_array($tampil)) {
                     $str = $data['arabic'];
                     echo '<p class = "arabic">'. $str . format_arabic_number($ayat) .'</p>';
-                    echo '<p class="latin">'.'['.$ayat.']'.$data['indonesia'].'</p>';
+                    echo '<p>'.'['.$ayat.']'.$data['indonesia'].'</p>';
                     echo '<hr>';
                     $ayat++;
                 }                              
