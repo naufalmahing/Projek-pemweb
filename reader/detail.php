@@ -17,10 +17,10 @@
 
         .arabic{
             font-family: 'Uthmani',serif;
-            font-size: 20px;
-            font-weight:normal;
+            font-size: 24px;
+            font-weight: 900;
             direction: rtl;
-            padding: - 5px;
+            padding: 5px;
             margin: 0;
         }
 
@@ -46,22 +46,28 @@
         }
 
         h2 {
+            margin: 0px;
+        }
+
+        h2 a {
             color:white;
             font-family: 'Inter UI', sans-serif;
-            margin: 0px;
+            text-decoration: none;
+        }
+
+        h2 a:hover {
+            color: white;
         }
 
         .header {
             background-color:#3bb78f;
         }
 
-        .arabic {
-            font-family: 'Uthmani',serif;
-            font-size: 24px;
-            font-weight: 500;
-            direction: rtl;
-            padding: 5px;
-            margin: 0;
+        .sticky {
+            background-color:#3bb78f;
+            position: sticky;
+            top: 0;
+            z-index: 5;
         }
 
         img {
@@ -111,14 +117,12 @@
                 $nama_surah = $_GET['nama_surah'];
                 $nama_surah = implode(' ', array_slice(explode(' ', $nama_surah), 1));
                 ?>
-                <div class="header">                
-                <?php echo '<h2 class="text-center">' . $nama_surah . '</h2>'; ?>
-                <div class="bot-header">
-                    <img src="../assets/tulisan_alquran.svg" alt="Italian Trulli" class="center">
-                    <div class="links row"><a align="center" href="../reader/index.php">Kembali</a></div>
-                    <br>
-                </div>
-                </div>
+                <div class="header sticky">
+                    <h2 class="text-center"><a href="../reader/">Quran Reader</a></h2>
+                </div>      
+                <br>        
+                <?php echo '<h3 class="text-center">' . $nama_surah . '</h3>'; ?>
+                <br>
                 <h4 class="arabic text-center">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h4>'
                 <br>
                 <div class="container">
@@ -134,7 +138,7 @@
                 $ayat = 1;
                 while ($data = mysqli_fetch_array($tampil)) {
                     $str = $data['arabic'];
-                    echo '<p class = "arabic">'. $str . format_arabic_number($ayat) .'</p>';
+                    echo '<p class = "arabic">'. $str . format_arabic_number($ayat) .'</p><br>';
                     echo '<p>'.'['.$ayat.']'.$data['indonesia'].'</p>';
                     echo '<hr>';
                     $ayat++;

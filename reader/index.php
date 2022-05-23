@@ -23,12 +23,27 @@
         }
 
         h2 {
+            margin: 0px;
+        }
+
+        h2 a {
             color:white;
             font-family: 'Inter UI', sans-serif;
+            text-decoration: none;
+        }
+
+        h2 a:hover {
+            color: white;
         }
 
         .header {
             background-color:#3bb78f;
+        }
+
+        .sticky {
+            background-color:#3bb78f;
+            position: sticky;
+            top: 0;
         }
 
         .arabic {
@@ -56,21 +71,15 @@
             display: flex;
             justify-content: space-between;  
         }
-
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 0px;
-        }
     </style>
 
   </head>
   <body>
-        <div class=header>
-                <h2 class="text-center">Quran Reader</h2>
-            
-                <div class=bot-header>
+        <div class="header sticky">
+            <h2 class="text-center"><a href="">Quran Reader</a></h2>
+        </div>
+        <div>
+                <div class="bot-header">
                     <img src="../assets/tulisan_alquran.svg" alt="Italian Trulli" class="center">
                 <?php
                     include '../search/search.php'; 
