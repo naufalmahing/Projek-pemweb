@@ -8,47 +8,97 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
     <title>Quran Reader</title>
     <style>
+        @import url('https://rsms.me/inter/inter-ui.css');
         @font-face {
             font-family: 'Uthmani';
             src: url('../assets/font/UthmanicHafs1Ver09.otf') format('truetype');
         }
 
-        .arabic{
+        body {
+            font-family: 'Inter UI', sans-serif;
+        }
+
+        h2 {
+            color:white;
+            font-family: 'Inter UI', sans-serif;
+        }
+
+        .header {
+            background-color:#3bb78f;
+        }
+
+        .arabic {
             font-family: 'Uthmani',serif;
             font-size: 20px;
             font-weight:normal;
             direction: rtl;
-            padding: - 5px;
+            padding: 5px;
             margin: 0;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bot-header {
+            background-image: linear-gradient(315deg, #7ee8fa 0%,#80ff72 74%);
+            display: block;
+            text-align: center;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;  
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0px;
         }
     </style>
 
   </head>
   <body>
-        <br>
+        <div class=header>
+                <h2 class="text-center">Quran Reader</h2>
+            
+                <div class=bot-header>
+                    <img src="../assets/tulisan_alquran.svg" alt="Italian Trulli" class="center">
+                <?php
+                    include '../search/search.php'; 
+
+                ?>
+                <br>
+                    <div class="links row">
+                <?php
+                    session_start();
+                    if (isset($_SESSION['email'])) {
+                        echo "<div class='text-center'>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b></div> <br>";
+                ?>
+                <br>
+                <?php 
+                    echo '<a class="col-sm-4" href="../login, register, forgot password/login.php" class="text-center">Log out</a>';
+                    } else {
+                    echo '<a class="col-sm-4" href="../login, register, forgot password/login.php" class="text-left">Login</a>';
+                    }
+                ?>
+                    <a class="col-sm-4" href="../jadwal/jadwal.php" class="text-center">Setel Reminder</a>
+                    <a class="col-sm-4" href="../download/download.php?path=al-qur'an.pdf" class="text-center">Download PDF</a>
+                    </div>
+                    <br>
+                </div>
+        </div>
         <div class="container">
-        <h2 class="text-center">Quran Reader - Kelompok 3</h2>
-        <hr>
-        <?php
-            include '../search/search.php'; 
-
-            session_start();
-            if (isset($_SESSION['email'])) {
-                echo "<div>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b> <br>";
-        ?>
-        <?php 
-                echo '<a href="../login, register, forgot password/login.php" class="text-left">Log out</a></div>';
-            } else {
-                echo '<a href="../login, register, forgot password/login.php" class="text-left">Login</a>';
-            }
-        ?>
-        <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
-        <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
-
         <br><br>
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered text-center">
             <tr>
                 <th>No</th>
                 <th>Surah</th>

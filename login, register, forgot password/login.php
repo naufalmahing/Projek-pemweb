@@ -77,7 +77,7 @@ if (isset($_POST["signin"])) {
         <input type="email" id="email" name="signin_email" value="<?php echo $_POST["signin_email"]; ?>" required />
         <label for="password">Password</label>
         <input type="password" id="password" name="signin_password" value="<?php echo $_POST["signin_password"]; ?>" required />
-        <input type="submit" id="submit" value="Submit" name="signin">
+        <input type="submit" id="submit" value="Login" name="signin">
         <br><br>
         <div class="under-bar">
         &emsp;

@@ -19,6 +19,17 @@
             }
         </script>
         <style>
+            input{
+                display: block;
+                height:40px;
+                width:24rem;
+                margin-left: auto;
+                margin-right: auto;
+                border:10px;
+                border-radius:20px;
+                padding-left: 12px;
+            }
+
             #livesearch {
                 position: absolute;
                 background-color: white;
@@ -28,7 +39,7 @@
 
     <body>
         <form>
-            <input type="text" size="30" onkeyup="showResult(this.value)">
+            <input type="text" size="30" onkeyup="showResult(this.value)" placeholder="Surah Al-Fatihah, 1">
             <div id="livesearch"></div>
         </form>
     </body>
