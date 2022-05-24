@@ -49,7 +49,7 @@
         .arabic {
             font-family: 'Uthmani',serif;
             font-size: 20px;
-            font-weight:normal;
+            font-weight: 900;
             direction: rtl;
             padding: 5px;
             margin: 0;

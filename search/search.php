@@ -39,7 +39,7 @@
 
     <body>
         <form>
-            <input type="text" size="30" onkeyup="showResult(this.value)" placeholder="Surah Al-Fatihah, 1">
+            <input type="text" size="30" onkeyup="showResult(this.value)" placeholder="Al-Fatihah, 1">
             <div id="livesearch"></div>
         </form>
     </body>
