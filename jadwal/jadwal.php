@@ -39,7 +39,7 @@ if (isset($_SESSION['email'])) {
             selectHelper:true,
             select: function(start, end, allDay) {
                 var email= 'anakmalang@gmail.com';
-                var title = prompt('Enter event title');
+                var title = prompt('Masukkan nama kegiatan');
                 if(title) {
                     var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
                     var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
@@ -68,7 +68,7 @@ if (isset($_SESSION['email'])) {
                     data:{title:title, start:start, end:end, id:id},
                     success:function() {
                         calendar.fullCalendar('refetchEvents');
-                        alert('Event update');
+                        alert('Event diupdate');
                     }
                 })
             },
@@ -84,13 +84,13 @@ if (isset($_SESSION['email'])) {
                     data:{title:event.title, start:start, end:end, id:id},
                     success:function() {
                         calendar.fullCalendar('refetchEvents');
-                        alert("Event Updated");
+                        alert("Event diupdate");
                     }
                 })
             },
 
             eventClick:function(event) {
-                if(confirm("Are you sure you want to remove it?")) {
+                if(confirm("Yakin mau menghapus event?")) {
                     var id = event.id;
                     $.ajax({
                         url:'delete.php',
@@ -98,7 +98,7 @@ if (isset($_SESSION['email'])) {
                         data:{id:id},
                         success:function() {
                             calendar.fullCalendar('refetchEvents');
-                            alert("Event Removed");
+                            alert("Event dihapus");
                         }
                     })
                 }
