@@ -2,6 +2,9 @@
     <head>
         <script>
             function showResult(str) {
+                if ( event.keyCode == 27 ) 
+                    this.innerHTML = "";
+
                 if (str.length == 0) {
                     document.getElementById("livesearch").innerHTML="";
                     document.getElementById("livesearch").style.border="0px";
@@ -17,9 +20,29 @@
                 xmlhttp.open("GET", "../search/livesearch.php?q="+str, true);
                 xmlhttp.send();
             }
+
+            function onkeypressed(evt, input) {
+                var code = evt.charCode || evt.keyCode;
+                if (code == 27) {
+                    input.value = '';
+                }
+            }
+
+            function closesearch() {
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
+            }
         </script>
         <style>
-            input{
+            form {
+                width: 24rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            input {
+                position: relative;
                 display: block;
                 height:40px;
                 width:24rem;
@@ -30,16 +53,23 @@
                 padding-left: 12px;
             }
 
+            input:focus {
+                outline: solid 2px #d7d9dc;
+            }
+
             #livesearch {
                 position: absolute;
                 background-color: white;
+                max-height: 12rem;
+                overflow: auto;
+                width: inherit;
             }
         </style>
     </head>
 
-    <body>
+    <body onclick="closesearch()">
         <form>
-            <input type="text" size="30" onkeyup="showResult(this.value)" placeholder="Al-Fatihah, 1">
+            <input type="text" size="30" onkeyup="showResult(this.value);" onkeydown="onkeypressed(event, this);" placeholder="Al-Fatihah, 1">
             <div id="livesearch"></div>
         </form>
     </body>

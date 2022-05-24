@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -88,7 +92,6 @@
                 <br>
                     <div class="links row">
                 <?php
-                    session_start();
                     if (isset($_SESSION['email'])) {
                         echo "<div class='text-center'>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b></div> <br>";
                 ?>

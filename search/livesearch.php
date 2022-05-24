@@ -24,7 +24,7 @@ if (strlen($q)>0) {
 }
 
 if ($hint=="") {
-    $response="no suggestion";
+    $response="Tidak ada nama surah";
 } else {
     $response=$hint;
 }
