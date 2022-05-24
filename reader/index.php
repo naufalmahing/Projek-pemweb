@@ -30,14 +30,10 @@
             margin: 0px;
         }
 
-        h2 a {
+        h2 a, h2 a:hover {
             color:white;
             font-family: 'Inter UI', sans-serif;
             text-decoration: none;
-        }
-
-        h2 a:hover {
-            color: white;
         }
 
         .header {
@@ -48,6 +44,7 @@
             background-color:#3bb78f;
             position: sticky;
             top: 0;
+            z-index: 5;
         }
 
         .arabic {
@@ -75,6 +72,16 @@
             display: flex;
             justify-content: space-between;  
         }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .links a:hover {
+            color: black;
+        }
     </style>
 
   </head>
@@ -97,13 +104,13 @@
                 ?>
                 <br>
                 <?php 
-                    echo '<a class="col-sm-4" href="../login, register, forgot password/login.php" class="text-center">Log out</a>';
+                    echo '<div class="col-sm-4"><a href="../login, register, forgot password/login.php" class="text-center">Log out</a></div>';
                     } else {
-                    echo '<a class="col-sm-4" href="../login, register, forgot password/login.php" class="text-left">Login</a>';
+                    echo '<div class="col-sm-4"><a href="../login, register, forgot password/login.php" class="text-left">Login</a></div>';
                     }
                 ?>
-                    <a class="col-sm-4" href="../jadwal/jadwal.php" class="text-center">Setel Reminder</a>
-                    <a class="col-sm-4" href="../download/download.php?path=al-qur'an.pdf" class="text-center">Download PDF</a>
+                    <div class="col-sm-4"><a href="../jadwal/jadwal.php" class="text-center">Setel Reminder</a></div>
+                    <div class="col-sm-4"><a href="../download/download.php?path=al-qur'an.pdf" class="text-center">Download PDF</a></div>
                     </div>
                     <br>
                 </div>
