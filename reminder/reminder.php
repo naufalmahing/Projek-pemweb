@@ -15,11 +15,13 @@ date_default_timezone_set('Asia/Jakarta');
 require 'sendmail.php';
 
 foreach($result as $row) {
+	echo date('d', strtotime($row['start_event'])) . '<br>';
+	echo date('d', strtotime('now')) . '<br>';
 	if (date('d', strtotime($row['start_event'])) == date('d', strtotime('now'))) {
 		send_email($row['email'], $row['title'], $row['start_event'], $row['end_event']);
 
 	} else {
-		echo 'tidak dikirim';
+		echo 'event ' . $row['title'] . 'tidak dikirim<br><br>';
 	}
 }
 ?>

@@ -26,8 +26,6 @@ function send_email($ke, $kegiatan, $mulai, $selesai) {
         $mail->SMTPSecure = 'tls';             
         $mail->Port       = 587;
 
-        
-
         $mail->setFrom('readerquran.officecenter@gmail.com', 'Quran Reader');
         $mail->addAddress($ke);     
         $mail->addReplyTo('no-reply@gmail.com', 'No Reply');
